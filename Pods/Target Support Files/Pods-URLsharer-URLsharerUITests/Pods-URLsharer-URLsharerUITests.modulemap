@@ -1,0 +1,6 @@
+framework module Pods_URLsharer_URLsharerUITests {
+  umbrella header "Pods-URLsharer-URLsharerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

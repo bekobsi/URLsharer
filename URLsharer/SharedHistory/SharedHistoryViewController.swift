@@ -7,10 +7,8 @@
 
 import UIKit
 
-class SharedHistoryViewController: UIViewController{
-    
+class SharedHistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }

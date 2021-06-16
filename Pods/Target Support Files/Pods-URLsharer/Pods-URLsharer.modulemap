@@ -1,0 +1,6 @@
+framework module Pods_URLsharer {
+  umbrella header "Pods-URLsharer-umbrella.h"
+
+  export *
+  module * { export * }
+}
