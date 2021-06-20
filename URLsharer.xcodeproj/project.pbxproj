@@ -16,8 +16,6 @@
 		98B4906C267905B900A5C3A3 /* URLsharerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4906B267905B900A5C3A3 /* URLsharerUITests.swift */; };
 		98B4907D267A18C100A5C3A3 /* SharedHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B4907C267A18C100A5C3A3 /* SharedHistory.storyboard */; };
 		98B49090267A199F00A5C3A3 /* SharedHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4908F267A199F00A5C3A3 /* SharedHistoryViewController.swift */; };
-		98B490D6267B82F700A5C3A3 /* QRcodeDisplayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B490D5267B82F700A5C3A3 /* QRcodeDisplayScreenViewController.swift */; };
-		98B490DE267B830D00A5C3A3 /* QRcodeDisplayScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B490DD267B830D00A5C3A3 /* QRcodeDisplayScreen.storyboard */; };
 		98B490E9267B83B200A5C3A3 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B490E8267B83B200A5C3A3 /* ShareViewController.swift */; };
 		98B490EC267B83B200A5C3A3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B490EA267B83B200A5C3A3 /* MainInterface.storyboard */; };
 		98B490F1267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 98B490E6267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -83,8 +81,6 @@
 		98B4906D267905B900A5C3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98B4907C267A18C100A5C3A3 /* SharedHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SharedHistory.storyboard; sourceTree = "<group>"; };
 		98B4908F267A199F00A5C3A3 /* SharedHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHistoryViewController.swift; sourceTree = "<group>"; };
-		98B490D5267B82F700A5C3A3 /* QRcodeDisplayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeDisplayScreenViewController.swift; sourceTree = "<group>"; };
-		98B490DD267B830D00A5C3A3 /* QRcodeDisplayScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRcodeDisplayScreen.storyboard; sourceTree = "<group>"; };
 		98B490E6267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QRcodeDisplayScreenExtention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B490E8267B83B200A5C3A3 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		98B490EB267B83B200A5C3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -159,7 +155,6 @@
 			children = (
 				98B49049267905B600A5C3A3 /* AppDelegate.swift */,
 				98B4904B267905B600A5C3A3 /* SceneDelegate.swift */,
-				98B490D4267B829500A5C3A3 /* QRcodeDisplayScreen */,
 				98B49097267A1A5400A5C3A3 /* SharedHistory */,
 				98B49052267905B900A5C3A3 /* Assets.xcassets */,
 				98B49054267905B900A5C3A3 /* LaunchScreen.storyboard */,
@@ -193,15 +188,6 @@
 				98B4907C267A18C100A5C3A3 /* SharedHistory.storyboard */,
 			);
 			path = SharedHistory;
-			sourceTree = "<group>";
-		};
-		98B490D4267B829500A5C3A3 /* QRcodeDisplayScreen */ = {
-			isa = PBXGroup;
-			children = (
-				98B490D5267B82F700A5C3A3 /* QRcodeDisplayScreenViewController.swift */,
-				98B490DD267B830D00A5C3A3 /* QRcodeDisplayScreen.storyboard */,
-			);
-			path = QRcodeDisplayScreen;
 			sourceTree = "<group>";
 		};
 		98B490E7267B83B200A5C3A3 /* QRcodeDisplayScreenExtention */ = {
@@ -368,7 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B4907D267A18C100A5C3A3 /* SharedHistory.storyboard in Resources */,
-				98B490DE267B830D00A5C3A3 /* QRcodeDisplayScreen.storyboard in Resources */,
 				98B49056267905B900A5C3A3 /* LaunchScreen.storyboard in Resources */,
 				98B49053267905B900A5C3A3 /* Assets.xcassets in Resources */,
 			);
@@ -491,7 +476,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B49090267A199F00A5C3A3 /* SharedHistoryViewController.swift in Sources */,
-				98B490D6267B82F700A5C3A3 /* QRcodeDisplayScreenViewController.swift in Sources */,
 				98B4904A267905B600A5C3A3 /* AppDelegate.swift in Sources */,
 				98B4904C267905B600A5C3A3 /* SceneDelegate.swift in Sources */,
 			);
