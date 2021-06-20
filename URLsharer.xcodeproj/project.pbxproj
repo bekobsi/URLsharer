@@ -17,7 +17,7 @@
 		98B4907D267A18C100A5C3A3 /* SharedHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B4907C267A18C100A5C3A3 /* SharedHistory.storyboard */; };
 		98B49090267A199F00A5C3A3 /* SharedHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4908F267A199F00A5C3A3 /* SharedHistoryViewController.swift */; };
 		98B490E9267B83B200A5C3A3 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B490E8267B83B200A5C3A3 /* ShareViewController.swift */; };
-		98B490EC267B83B200A5C3A3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B490EA267B83B200A5C3A3 /* MainInterface.storyboard */; };
+		98B490EC267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B490EA267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard */; };
 		98B490F1267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 98B490E6267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9CB57DF3B7383FC81368280D /* Pods_URLsharerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21EA89B1AD9848BF5AA6C1D /* Pods_URLsharerTests.framework */; };
 		9E20B438FA979509F2026D82 /* Pods_URLsharer_URLsharerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AD5E2DDB5C9D965FA6094C /* Pods_URLsharer_URLsharerUITests.framework */; };
@@ -83,7 +83,7 @@
 		98B4908F267A199F00A5C3A3 /* SharedHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHistoryViewController.swift; sourceTree = "<group>"; };
 		98B490E6267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QRcodeDisplayScreenExtention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B490E8267B83B200A5C3A3 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
-		98B490EB267B83B200A5C3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		98B490EB267B83B200A5C3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QRcodeDisplayScreen.storyboard; sourceTree = "<group>"; };
 		98B490ED267B83B200A5C3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A37D1DAD24D236EA283E05FB /* Pods-URLsharer-URLsharerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer-URLsharerUITests.debug.xcconfig"; path = "Target Support Files/Pods-URLsharer-URLsharerUITests/Pods-URLsharer-URLsharerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B83EAA8C24A47C803466522F /* Pods-URLsharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer.release.xcconfig"; path = "Target Support Files/Pods-URLsharer/Pods-URLsharer.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				98B490E8267B83B200A5C3A3 /* ShareViewController.swift */,
-				98B490EA267B83B200A5C3A3 /* MainInterface.storyboard */,
+				98B490EA267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard */,
 				98B490ED267B83B200A5C3A3 /* Info.plist */,
 			);
 			path = QRcodeDisplayScreenExtention;
@@ -377,7 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98B490EC267B83B200A5C3A3 /* MainInterface.storyboard in Resources */,
+				98B490EC267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,12 +534,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		98B490EA267B83B200A5C3A3 /* MainInterface.storyboard */ = {
+		98B490EA267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				98B490EB267B83B200A5C3A3 /* Base */,
 			);
-			name = MainInterface.storyboard;
+			name = QRcodeDisplayScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

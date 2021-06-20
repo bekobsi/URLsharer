@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Share View Controller-->
+        <!--Rcode Display Screen-->
         <scene sceneID="J5w-id-pNZ">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="JyW-2H-cTq" customClass="ShareViewController" customModule="QRcodeDisplayScreenExtention" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRcodeDisplayScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JyW-2H-cTq" customClass="QRcodeDisplayScreen" customModule="QRcodeDisplayScreenExtention" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZaY-sg-bSn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

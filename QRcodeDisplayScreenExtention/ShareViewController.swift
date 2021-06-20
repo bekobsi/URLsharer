@@ -9,8 +9,7 @@ import MobileCoreServices
 import Social
 import UIKit
 
-
-class ShareViewController: UIViewController {
+class QRcodeDisplayScreen: UIViewController {
     @IBOutlet var testImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
