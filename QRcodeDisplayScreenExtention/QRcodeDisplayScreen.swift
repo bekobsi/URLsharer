@@ -11,10 +11,16 @@ import UIKit
 
 class QRcodeDisplayScreen: UIViewController {
     @IBOutlet var testImage: UIImageView!
+    @IBOutlet var urlLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        retrieveData()
+    }
+
+    private func retrieveData() {
         let extensionItem: NSExtensionItem = extensionContext?.inputItems.first as! NSExtensionItem
-        let itemProvider = extensionItem.attachments?.first as! NSItemProvider
+        guard let itemProvider = extensionItem.attachments?.first else { return }
 
         let puclicURL = String(kUTTypeURL) // "public.url"
         print("puclicURL:", puclicURL)
@@ -24,19 +30,18 @@ class QRcodeDisplayScreen: UIViewController {
                 // NSURLを取得する
                 if let url: NSURL = item as? NSURL {
                     // ----------
-                    // 保存処理
+                    // QRcodeに変換
                     // ----------
                     print("url", url.absoluteString!)
                     let QRimage = self.generateQRCode(from: url.absoluteString!)
-                    self.testImage.image = QRimage
+                    self.testImage.image = QRimage!
+                    self.urlLabel.text = url.absoluteString
                 }
             })
         }
-
-//        let QRimage = generateQRCode(from: "https://github.com/el-hoshino/QuickshaRe")
     }
 
-    func generateQRCode(from string: String) -> UIImage? {
+    private func generateQRCode(from string: String) -> UIImage? {
         let data = string.data(using: String.Encoding.ascii)
         if let QRFilter = CIFilter(name: "CIQRCodeGenerator") {
             QRFilter.setValue(data, forKey: "inputMessage")
