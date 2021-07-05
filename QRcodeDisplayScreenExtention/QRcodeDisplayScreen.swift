@@ -12,10 +12,15 @@ import UIKit
 class QRcodeDisplayScreen: UIViewController {
     @IBOutlet var testImage: UIImageView!
     @IBOutlet var urlLabel: UILabel!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         retrieveData()
+        let leftBarButton = UIBarButtonItem(title: "戻る", style: .plain, target: self, action: #selector(tappedLeftBarButton))
+        navigationItem.leftBarButtonItem = leftBarButton
+    }
+
+    @objc func tappedLeftBarButton() {
+        extensionContext!.completeRequest(returningItems: nil, completionHandler: nil)
     }
 
     private func retrieveData() {
