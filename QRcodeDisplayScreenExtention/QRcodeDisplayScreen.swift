@@ -38,9 +38,12 @@ class QRcodeDisplayScreen: UIViewController {
                     // QRcodeに変換
                     // ----------
                     print("url", url.absoluteString!)
-                    let QRimage = self.generateQRCode(from: url.absoluteString!)
-                    self.testImage.image = QRimage!
-                    self.urlLabel.text = url.absoluteString
+                    let QRimage = self.generateQRCode(from: url.absoluteString ?? "")
+                    DispatchQueue.main.sync {
+                        // code...
+                        self.testImage.image = QRimage
+                        self.urlLabel.text = url.absoluteString
+                    }
                 }
             })
         }
