@@ -31,15 +31,11 @@ class QRcodeDisplayScreen: UIViewController {
         // shareExtension で NSURL を取得
         if itemProvider.hasItemConformingToTypeIdentifier(puclicURL) {
             itemProvider.loadItem(forTypeIdentifier: puclicURL, options: nil, completionHandler: { item, _ in
-                // NSURLを取得する
                 if let url: NSURL = item as? NSURL {
-                    // ----------
                     // QRcodeに変換
                     // ----------
-                    print("url", url.absoluteString!)
                     let QRimage = self.generateQRCode(from: url.absoluteString ?? "")
                     DispatchQueue.main.sync {
-                        // code...
                         self.testImage.image = QRimage
                         self.urlLabel.text = url.absoluteString
                     }
