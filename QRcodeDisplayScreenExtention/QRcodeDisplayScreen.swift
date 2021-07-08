@@ -4,7 +4,6 @@
 //
 //  Created by 原直也 on 2021/06/17.
 //
-
 import MobileCoreServices
 import Social
 import UIKit
