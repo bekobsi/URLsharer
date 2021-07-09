@@ -23,19 +23,18 @@ class QRcodeDisplayScreen: UIViewController {
     }
 
     private func retrieveData() {
-        let extensionItem: NSExtensionItem = extensionContext?.inputItems.first as! NSExtensionItem
-        guard let itemProvider = extensionItem.attachments?.first else { return }
-
-        let puclicURL = String(kUTTypeURL) // "public.url"
+        guard let extensionItem: NSExtensionItem = extensionContext?.inputItems.first as? NSExtensionItem,
+              let itemProviders = extensionItem.attachments?.first else { return }
+        let puclicURL = String(kUTTypeURL)
         print("puclicURL:", puclicURL)
         // shareExtension で NSURL を取得
-        if itemProvider.hasItemConformingToTypeIdentifier(puclicURL) {
-            itemProvider.loadItem(forTypeIdentifier: puclicURL, options: nil, completionHandler: { item, _ in
+        if itemProviders.hasItemConformingToTypeIdentifier(puclicURL) {
+            itemProviders.loadItem(forTypeIdentifier: puclicURL, options: nil, completionHandler: { item, _ in
                 if let url: NSURL = item as? NSURL {
                     // QRcodeに変換
                     // ----------
                     let QRimage = self.generateQRCode(from: url.absoluteString ?? "")
-                    DispatchQueue.main.sync {
+                    DispatchQueue.main.async {
                         self.testImage.image = QRimage
                         self.urlLabel.text = url.absoluteString
                     }
