@@ -9,7 +9,7 @@ import Social
 import UIKit
 
 class QRcodeDisplayScreen: UIViewController {
-    @IBOutlet var testImage: UIImageView!
+    @IBOutlet var QRCodeImage: UIImageView!
     @IBOutlet var urlLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class QRcodeDisplayScreen: UIViewController {
                     // ----------
                     let QRimage = self.generateQRCode(from: url.absoluteString ?? "")
                     DispatchQueue.main.async {
-                        self.testImage.image = QRimage
+                        self.QRCodeImage.image = QRimage
                         self.urlLabel.text = url.absoluteString
                     }
                 }
