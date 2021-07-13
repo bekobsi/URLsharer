@@ -19,6 +19,7 @@
 		98B490E9267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B490E8267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift */; };
 		98B490EC267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B490EA267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard */; };
 		98B490F1267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 98B490E6267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		98E2176F269C785F0042454F /* SharedHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E2176E269C785F0042454F /* SharedHistoryPresenter.swift */; };
 		9CB57DF3B7383FC81368280D /* Pods_URLsharerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21EA89B1AD9848BF5AA6C1D /* Pods_URLsharerTests.framework */; };
 		9E20B438FA979509F2026D82 /* Pods_URLsharer_URLsharerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AD5E2DDB5C9D965FA6094C /* Pods_URLsharer_URLsharerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		98B490E8267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeDisplayScreenViewController.swift; sourceTree = "<group>"; };
 		98B490EB267B83B200A5C3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QRcodeDisplayScreen.storyboard; sourceTree = "<group>"; };
 		98B490ED267B83B200A5C3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98E2176E269C785F0042454F /* SharedHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHistoryPresenter.swift; sourceTree = "<group>"; };
 		A37D1DAD24D236EA283E05FB /* Pods-URLsharer-URLsharerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer-URLsharerUITests.debug.xcconfig"; path = "Target Support Files/Pods-URLsharer-URLsharerUITests/Pods-URLsharer-URLsharerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B83EAA8C24A47C803466522F /* Pods-URLsharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer.release.xcconfig"; path = "Target Support Files/Pods-URLsharer/Pods-URLsharer.release.xcconfig"; sourceTree = "<group>"; };
 		C21EA89B1AD9848BF5AA6C1D /* Pods_URLsharerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URLsharerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				98B4908F267A199F00A5C3A3 /* SharedHistoryViewController.swift */,
+				98E2176E269C785F0042454F /* SharedHistoryPresenter.swift */,
 				98B4907C267A18C100A5C3A3 /* SharedHistory.storyboard */,
 			);
 			path = SharedHistory;
@@ -475,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E2176F269C785F0042454F /* SharedHistoryPresenter.swift in Sources */,
 				98B49090267A199F00A5C3A3 /* SharedHistoryViewController.swift in Sources */,
 				98B4904A267905B600A5C3A3 /* AppDelegate.swift in Sources */,
 				98B4904C267905B600A5C3A3 /* SceneDelegate.swift in Sources */,
