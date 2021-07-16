@@ -14,6 +14,10 @@ class QRcodeDisplayScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         retrieveData()
+    }
+
+    private func setUpView() {
+        overrideUserInterfaceStyle = .light
         let leftBarButton = UIBarButtonItem(title: "戻る", style: .plain, target: self, action: #selector(tappedLeftBarButton))
         navigationItem.leftBarButtonItem = leftBarButton
     }
@@ -33,23 +37,12 @@ class QRcodeDisplayScreen: UIViewController {
                 if let url: NSURL = item as? NSURL {
                     // QRcodeに変換
                     // ----------
-                    let QRimage = self.generateQRCode(from: url.absoluteString ?? "")
                     DispatchQueue.main.async {
-                        self.QRCodeImage.image = QRimage
+                        self.QRCodeImage.image = UIImage.makeQRCode(text: url.absoluteString!)
                         self.urlLabel.text = url.absoluteString
                     }
                 }
             })
         }
-    }
-
-    private func generateQRCode(from string: String) -> UIImage? {
-        let data = string.data(using: String.Encoding.ascii)
-        if let QRFilter = CIFilter(name: "CIQRCodeGenerator") {
-            QRFilter.setValue(data, forKey: "inputMessage")
-            guard let QRImage = QRFilter.outputImage else { return nil }
-            return UIImage(ciImage: QRImage)
-        }
-        return nil
     }
 }
