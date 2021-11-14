@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4CCFB45CD739D231BD2DF940 /* Pods_URLsharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BC2E024A15A9F3BC42991F /* Pods_URLsharer.framework */; };
+		980D7F59273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980D7F57273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.swift */; };
+		980D7F5A273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980D7F58273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.xib */; };
 		98B4904A267905B600A5C3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B49049267905B600A5C3A3 /* AppDelegate.swift */; };
 		98B4904C267905B600A5C3A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4904B267905B600A5C3A3 /* SceneDelegate.swift */; };
 		98B49053267905B900A5C3A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B49052267905B900A5C3A3 /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 		57AD5E2DDB5C9D965FA6094C /* Pods_URLsharer_URLsharerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URLsharer_URLsharerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D004609EE903B1F8E54075 /* Pods-URLsharer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer.debug.xcconfig"; path = "Target Support Files/Pods-URLsharer/Pods-URLsharer.debug.xcconfig"; sourceTree = "<group>"; };
 		8ADCD25FD38346FD31CE723C /* Pods-URLsharer-URLsharerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer-URLsharerUITests.release.xcconfig"; path = "Target Support Files/Pods-URLsharer-URLsharerUITests/Pods-URLsharer-URLsharerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		980D7F57273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLHistoryTableVIewCell.swift; path = ../Xibs/URLHistoryTableVIewCell.swift; sourceTree = "<group>"; };
+		980D7F58273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = URLHistoryTableVIewCell.xib; sourceTree = "<group>"; };
 		98B49046267905B600A5C3A3 /* URLsharer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLsharer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B49049267905B600A5C3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B4904B267905B600A5C3A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		980D7F40273BE9DB00D1D6B6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				980D7F57273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		980D7F41273BE9F100D1D6B6 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				980D7F58273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		98B4903D267905B600A5C3A3 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +177,9 @@
 		98B49048267905B600A5C3A3 /* URLsharer */ = {
 			isa = PBXGroup;
 			children = (
+				98E2177026A0734D0042454F /* Extensions */,
+				980D7F40273BE9DB00D1D6B6 /* Cells */,
+				980D7F41273BE9F100D1D6B6 /* Xibs */,
 				98B49097267A1A5400A5C3A3 /* SharedHistory */,
 				98B49052267905B900A5C3A3 /* Assets.xcassets */,
 				98B49054267905B900A5C3A3 /* LaunchScreen.storyboard */,
@@ -188,10 +211,9 @@
 		98B49097267A1A5400A5C3A3 /* SharedHistory */ = {
 			isa = PBXGroup;
 			children = (
-				98E2177026A0734D0042454F /* Extentions */,
+				98B4907C267A18C100A5C3A3 /* SharedHistory.storyboard */,
 				98B4908F267A199F00A5C3A3 /* SharedHistoryViewController.swift */,
 				98E2176E269C785F0042454F /* SharedHistoryPresenter.swift */,
-				98B4907C267A18C100A5C3A3 /* SharedHistory.storyboard */,
 			);
 			path = SharedHistory;
 			sourceTree = "<group>";
@@ -206,12 +228,12 @@
 			path = QRcodeDisplayScreenExtention;
 			sourceTree = "<group>";
 		};
-		98E2177026A0734D0042454F /* Extentions */ = {
+		98E2177026A0734D0042454F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				98E2177126A073600042454F /* UIImageExtension.swift */,
 			);
-			path = Extentions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A85E15CEEDA17669FF682AEB /* Pods */ = {
@@ -367,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980D7F5A273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.xib in Resources */,
 				98B4907D267A18C100A5C3A3 /* SharedHistory.storyboard in Resources */,
 				98B49056267905B900A5C3A3 /* LaunchScreen.storyboard in Resources */,
 				98B49053267905B900A5C3A3 /* Assets.xcassets in Resources */,
@@ -491,6 +514,7 @@
 			files = (
 				98E2176F269C785F0042454F /* SharedHistoryPresenter.swift in Sources */,
 				98B49090267A199F00A5C3A3 /* SharedHistoryViewController.swift in Sources */,
+				980D7F59273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.swift in Sources */,
 				98B4904A267905B600A5C3A3 /* AppDelegate.swift in Sources */,
 				98B4904C267905B600A5C3A3 /* SceneDelegate.swift in Sources */,
 			);
