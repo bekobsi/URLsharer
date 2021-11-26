@@ -10,7 +10,6 @@ import UIKit
 class SharedHistoryViewController: UIViewController {
     @IBOutlet var sharedHistoryTableView: UITableView!
 
-    let todo = ["渋谷", "五反田", "新宿"]
     private var presenter: SharedHistoryPresenterInput!
     func inject(presenter: SharedHistoryPresenterInput) {
         self.presenter = presenter
@@ -19,23 +18,34 @@ class SharedHistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sharedHistoryTableView.register(UINib(nibName: "URLHistoryTableVIewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
+        inject(presenter: SharedHistoryPresenter(view: self))
+
+        presenter.fetchURLMetadata()
     }
 }
 
-extension SharedHistoryViewController: SharedHistoryPresenterOutput {}
+// MARK: - SharedHistoryTableView Extention
 
 extension SharedHistoryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return todo.count
+        return presenter.todo.count
     }
 
     func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = sharedHistoryTableView.dequeueReusableCell(withIdentifier: "CustomCell") as! URLHistoryTableVIewCell
-        cell.textLabel?.text = todo[indexPath.row]
+        cell.textLabel?.text = presenter.todo[indexPath.row]
         return cell
     }
 
     func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
         return 100
+    }
+}
+
+// MARK: - SharedHistoryPresenterOutput
+
+extension SharedHistoryViewController: SharedHistoryPresenterOutput {
+    func showURLMetadata() {
+        sharedHistoryTableView.reloadData()
     }
 }

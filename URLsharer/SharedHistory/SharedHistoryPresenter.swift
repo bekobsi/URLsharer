@@ -7,14 +7,25 @@
 
 import Foundation
 
-protocol SharedHistoryPresenterInput {}
+protocol SharedHistoryPresenterInput {
+    var todo: [String] { get }
+    func fetchURLMetadata()
+}
 
-protocol SharedHistoryPresenterOutput: AnyObject {}
+protocol SharedHistoryPresenterOutput: AnyObject {
+    func showURLMetadata()
+}
 
 final class SharedHistoryPresenter: SharedHistoryPresenterInput {
+    private(set) var todo: [String] = []
+
     private weak var view: SharedHistoryPresenterOutput!
 
     init(view: SharedHistoryPresenterOutput) {
         self.view = view
+    }
+
+    func fetchURLMetadata() {
+        todo = ["渋谷", "五反田", "新宿"]
     }
 }

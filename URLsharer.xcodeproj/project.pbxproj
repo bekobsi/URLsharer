@@ -178,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				98E2177026A0734D0042454F /* Extensions */,
+				98BB614C275103530016CD1A /* Models */,
 				980D7F40273BE9DB00D1D6B6 /* Cells */,
 				980D7F41273BE9F100D1D6B6 /* Xibs */,
 				98B49097267A1A5400A5C3A3 /* SharedHistory */,
@@ -226,6 +227,13 @@
 				98B490ED267B83B200A5C3A3 /* Info.plist */,
 			);
 			path = QRcodeDisplayScreenExtention;
+			sourceTree = "<group>";
+		};
+		98BB614C275103530016CD1A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		98E2177026A0734D0042454F /* Extensions */ = {
@@ -279,6 +287,8 @@
 				98B490EF267B83B200A5C3A3 /* PBXTargetDependency */,
 			);
 			name = URLsharer;
+			packageProductDependencies = (
+			);
 			productName = URLsharer;
 			productReference = 98B49046267905B600A5C3A3 /* URLsharer.app */;
 			productType = "com.apple.product-type.application";
@@ -334,6 +344,8 @@
 			dependencies = (
 			);
 			name = QRcodeDisplayScreenExtention;
+			packageProductDependencies = (
+			);
 			productName = QRcodeDisplayScreenExtention;
 			productReference = 98B490E6267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -372,6 +384,8 @@
 				Base,
 			);
 			mainGroup = 98B4903D267905B600A5C3A3;
+			packageReferences = (
+			);
 			productRefGroup = 98B49047267905B600A5C3A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
