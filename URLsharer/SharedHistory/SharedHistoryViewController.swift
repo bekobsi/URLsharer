@@ -18,8 +18,6 @@ class SharedHistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sharedHistoryTableView.register(UINib(nibName: "URLHistoryTableVIewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
-        inject(presenter: SharedHistoryPresenter(view: self))
-
         presenter.fetchURLMetadata()
     }
 }
@@ -28,12 +26,12 @@ class SharedHistoryViewController: UIViewController {
 
 extension SharedHistoryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return presenter.todo.count
+        return presenter.linkMetadata.count
     }
 
     func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = sharedHistoryTableView.dequeueReusableCell(withIdentifier: "CustomCell") as! URLHistoryTableVIewCell
-        cell.textLabel?.text = presenter.todo[indexPath.row]
+        cell.siteMetadataInfo = presenter.linkMetadata[indexPath.row]
         return cell
     }
 
@@ -45,7 +43,9 @@ extension SharedHistoryViewController: UITableViewDataSource, UITableViewDelegat
 // MARK: - SharedHistoryPresenterOutput
 
 extension SharedHistoryViewController: SharedHistoryPresenterOutput {
-    func showURLMetadata() {
-        sharedHistoryTableView.reloadData()
+    func sharedHistoryTableViewReloadData() {
+        DispatchQueue.main.async {
+            self.sharedHistoryTableView.reloadData()
+        }
     }
 }

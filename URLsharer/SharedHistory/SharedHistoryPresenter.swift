@@ -6,26 +6,43 @@
 //
 
 import Foundation
+import LinkPresentation
+import RxSwift
 
 protocol SharedHistoryPresenterInput {
-    var todo: [String] { get }
+    var linkMetadata: [LPLinkMetadata] { get }
+    var linkMetadataTitle: String { get }
     func fetchURLMetadata()
 }
 
 protocol SharedHistoryPresenterOutput: AnyObject {
-    func showURLMetadata()
+    func sharedHistoryTableViewReloadData()
 }
 
 final class SharedHistoryPresenter: SharedHistoryPresenterInput {
-    private(set) var todo: [String] = []
+    private(set) var linkMetadata: [LPLinkMetadata] = []
+    private(set) var linkMetadataTitle: String = ""
 
     private weak var view: SharedHistoryPresenterOutput!
+    private let linkMetadataRepository: LinkMetadataRepository
 
-    init(view: SharedHistoryPresenterOutput) {
+    private let disposeBag = DisposeBag()
+
+    init(
+        view: SharedHistoryPresenterOutput,
+        linkMetadataRepository: LinkMetadataRepository = FetchLinkMetadata()
+    ) {
         self.view = view
+        self.linkMetadataRepository = linkMetadataRepository
     }
 
     func fetchURLMetadata() {
-        todo = ["渋谷", "五反田", "新宿"]
+        linkMetadataRepository.get().subscribe(onSuccess: { [weak self] linkmetadata in
+            self?.linkMetadata = linkmetadata
+            print("linkmetadata.count :", linkmetadata.count)
+//            self?.linkMetadataTitle = linkmetadata.title ?? ""
+            self?.view.sharedHistoryTableViewReloadData()
+        })
+            .disposed(by: disposeBag)
     }
 }

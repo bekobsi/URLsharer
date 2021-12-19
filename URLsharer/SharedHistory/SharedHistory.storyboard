@@ -12,7 +12,7 @@
         <!--Shared History View Controller-->
         <scene sceneID="Esj-R6-UBw">
             <objects>
-                <viewController id="Cye-wb-tsH" customClass="SharedHistoryViewController" customModule="URLsharer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SharedHistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cye-wb-tsH" customClass="SharedHistoryViewController" customModule="URLsharer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="inP-pK-bOc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +35,7 @@
                             <constraint firstItem="Iai-bM-BPU" firstAttribute="trailing" secondItem="Fxa-Uw-XMQ" secondAttribute="trailing" id="ntN-4Z-PYB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="IdZ-JX-KU5"/>
                     <connections>
                         <outlet property="sharedHistoryTableView" destination="Fxa-Uw-XMQ" id="Xze-Tc-OYj"/>
                     </connections>

@@ -35,6 +35,7 @@ class QRcodeDisplayScreen: UIViewController {
         if itemProviders.hasItemConformingToTypeIdentifier(puclicURL) {
             itemProviders.loadItem(forTypeIdentifier: puclicURL, options: nil, completionHandler: { item, _ in
                 if let url: NSURL = item as? NSURL {
+                    self.urlAddToUserDefaults(url: url.absoluteString!)
                     // QRcodeに変換
                     // ----------
                     DispatchQueue.main.async {
@@ -44,5 +45,14 @@ class QRcodeDisplayScreen: UIViewController {
                 }
             })
         }
+    }
+
+    private func urlAddToUserDefaults(url: String) {
+        let groupName = "group.UrldataShareGroups"
+        let userDefaults = UserDefaults(suiteName: groupName)
+        var urlHistoryList = userDefaults?.array(forKey: "urlHistoryList") as? [String] ?? []
+        urlHistoryList.insert(url, at: 0)
+        userDefaults?.set(urlHistoryList, forKey: "urlHistoryList")
+        print("urlHistoryList:", userDefaults?.array(forKey: "urlHistoryList"))
     }
 }

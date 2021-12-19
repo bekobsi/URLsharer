@@ -11,6 +11,7 @@
 		980D7F59273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980D7F57273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.swift */; };
 		980D7F5A273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980D7F58273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.xib */; };
 		987D5C0327510ACC00671A01 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 987D5C0227510ACC00671A01 /* RxSwift */; };
+		987D5C0727538BBC00671A01 /* FetchLinkMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987D5C0627538BBC00671A01 /* FetchLinkMetadata.swift */; };
 		98B4904A267905B600A5C3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B49049267905B600A5C3A3 /* AppDelegate.swift */; };
 		98B4904C267905B600A5C3A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4904B267905B600A5C3A3 /* SceneDelegate.swift */; };
 		98B49053267905B900A5C3A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B49052267905B900A5C3A3 /* Assets.xcassets */; };
@@ -74,6 +75,8 @@
 		8ADCD25FD38346FD31CE723C /* Pods-URLsharer-URLsharerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer-URLsharerUITests.release.xcconfig"; path = "Target Support Files/Pods-URLsharer-URLsharerUITests/Pods-URLsharer-URLsharerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		980D7F57273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLHistoryTableVIewCell.swift; path = ../Xibs/URLHistoryTableVIewCell.swift; sourceTree = "<group>"; };
 		980D7F58273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = URLHistoryTableVIewCell.xib; sourceTree = "<group>"; };
+		987D5C0627538BBC00671A01 /* FetchLinkMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLinkMetadata.swift; sourceTree = "<group>"; };
+		98A7641C2768A6B200009D8D /* URLsharer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = URLsharer.entitlements; sourceTree = "<group>"; };
 		98B49046267905B600A5C3A3 /* URLsharer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLsharer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B49049267905B600A5C3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B4904B267905B600A5C3A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		98B490E8267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeDisplayScreenViewController.swift; sourceTree = "<group>"; };
 		98B490EB267B83B200A5C3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QRcodeDisplayScreen.storyboard; sourceTree = "<group>"; };
 		98B490ED267B83B200A5C3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98D69E6627678ED400CAA76F /* QRcodeDisplayScreenExtention.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QRcodeDisplayScreenExtention.entitlements; sourceTree = "<group>"; };
 		98E2176E269C785F0042454F /* SharedHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHistoryPresenter.swift; sourceTree = "<group>"; };
 		98E2177126A073600042454F /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		A37D1DAD24D236EA283E05FB /* Pods-URLsharer-URLsharerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer-URLsharerUITests.debug.xcconfig"; path = "Target Support Files/Pods-URLsharer-URLsharerUITests/Pods-URLsharer-URLsharerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 		98B49048267905B600A5C3A3 /* URLsharer */ = {
 			isa = PBXGroup;
 			children = (
+				98A7641C2768A6B200009D8D /* URLsharer.entitlements */,
 				98E2177026A0734D0042454F /* Extensions */,
 				98BB614C275103530016CD1A /* Models */,
 				980D7F40273BE9DB00D1D6B6 /* Cells */,
@@ -224,6 +229,7 @@
 		98B490E7267B83B200A5C3A3 /* QRcodeDisplayScreenExtention */ = {
 			isa = PBXGroup;
 			children = (
+				98D69E6627678ED400CAA76F /* QRcodeDisplayScreenExtention.entitlements */,
 				98B490EA267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard */,
 				98B490E8267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift */,
 				98B490ED267B83B200A5C3A3 /* Info.plist */,
@@ -234,6 +240,7 @@
 		98BB614C275103530016CD1A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				987D5C0627538BBC00671A01 /* FetchLinkMetadata.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -534,6 +541,7 @@
 				98B49090267A199F00A5C3A3 /* SharedHistoryViewController.swift in Sources */,
 				980D7F59273BEDEF00D1D6B6 /* URLHistoryTableVIewCell.swift in Sources */,
 				98B4904A267905B600A5C3A3 /* AppDelegate.swift in Sources */,
+				987D5C0727538BBC00671A01 /* FetchLinkMetadata.swift in Sources */,
 				98B4904C267905B600A5C3A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,6 +734,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = URLsharer/URLsharer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FB9J7G99N9;
 				INFOPLIST_FILE = URLsharer/Info.plist;
@@ -747,6 +756,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = URLsharer/URLsharer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FB9J7G99N9;
 				INFOPLIST_FILE = URLsharer/Info.plist;
@@ -852,6 +862,7 @@
 		98B490F3267B83B200A5C3A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QRcodeDisplayScreenExtention/QRcodeDisplayScreenExtention.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FB9J7G99N9;
 				INFOPLIST_FILE = QRcodeDisplayScreenExtention/Info.plist;
@@ -871,6 +882,7 @@
 		98B490F4267B83B200A5C3A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QRcodeDisplayScreenExtention/QRcodeDisplayScreenExtention.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FB9J7G99N9;
 				INFOPLIST_FILE = QRcodeDisplayScreenExtention/Info.plist;

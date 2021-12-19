@@ -12,14 +12,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let sharedHistoryViewController = UIStoryboard(name: "SharedHistory", bundle: nil).instantiateInitialViewController() as! SharedHistoryViewController
-
-        let sharedHistoryPresenter = SharedHistoryPresenter(view: sharedHistoryViewController)
-        sharedHistoryViewController.inject(presenter: sharedHistoryPresenter)
-
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-
         return true
     }
 
