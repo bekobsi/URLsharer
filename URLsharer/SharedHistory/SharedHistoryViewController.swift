@@ -38,6 +38,10 @@ extension SharedHistoryViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        sharedHistoryTableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 // MARK: - SharedHistoryPresenterOutput
