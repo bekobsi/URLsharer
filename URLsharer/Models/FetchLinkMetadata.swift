@@ -20,9 +20,7 @@ final class FetchLinkMetadata: LinkMetadataRepository {
         let groupName = "group.UrldataShareGroups"
         let userDefaults = UserDefaults(suiteName: groupName)
         let urlHistoryList = userDefaults?.stringArray(forKey: "urlHistoryList") ?? []
-        print("urlHistoryList:", urlHistoryList)
         let converedUrlHistoryList = urlHistoryList.map { self.convert(url: URL(string: $0)!) }
-        print("urlconvert: ", converedUrlHistoryList)
 
         return Observable.zip(converedUrlHistoryList).take(1).asSingle()
     }

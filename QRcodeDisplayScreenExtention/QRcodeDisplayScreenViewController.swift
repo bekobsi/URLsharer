@@ -30,7 +30,6 @@ class QRcodeDisplayScreen: UIViewController {
         guard let extensionItem: NSExtensionItem = extensionContext?.inputItems.first as? NSExtensionItem,
               let itemProviders = extensionItem.attachments?.first else { return }
         let puclicURL = String(kUTTypeURL)
-        print("puclicURL:", puclicURL)
         // shareExtension で NSURL を取得
         if itemProviders.hasItemConformingToTypeIdentifier(puclicURL) {
             itemProviders.loadItem(forTypeIdentifier: puclicURL, options: nil, completionHandler: { item, _ in
@@ -53,6 +52,5 @@ class QRcodeDisplayScreen: UIViewController {
         var urlHistoryList = userDefaults?.array(forKey: "urlHistoryList") as? [String] ?? []
         urlHistoryList.insert(url, at: 0)
         userDefaults?.set(urlHistoryList, forKey: "urlHistoryList")
-        print("urlHistoryList:", userDefaults?.array(forKey: "urlHistoryList"))
     }
 }

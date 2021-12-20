@@ -39,8 +39,6 @@ final class SharedHistoryPresenter: SharedHistoryPresenterInput {
     func fetchURLMetadata() {
         linkMetadataRepository.get().subscribe(onSuccess: { [weak self] linkmetadata in
             self?.linkMetadata = linkmetadata
-            print("linkmetadata.count :", linkmetadata.count)
-//            self?.linkMetadataTitle = linkmetadata.title ?? ""
             self?.view.sharedHistoryTableViewReloadData()
         })
             .disposed(by: disposeBag)
