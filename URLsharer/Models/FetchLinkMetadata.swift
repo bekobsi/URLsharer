@@ -12,7 +12,6 @@ import RxSwift
 
 protocol LinkMetadataRepository {
     func get() -> Single<[LPLinkMetadata]>
-    func convert(url: URL) -> Observable<LPLinkMetadata>
 }
 
 final class FetchLinkMetadata: LinkMetadataRepository {
@@ -25,7 +24,7 @@ final class FetchLinkMetadata: LinkMetadataRepository {
         return Observable.zip(converedUrlHistoryList).take(1).asSingle()
     }
 
-    func convert(url: URL) -> Observable<LPLinkMetadata> {
+   private func convert(url: URL) -> Observable<LPLinkMetadata> {
         return Observable.create { observer in
             let metadataProvider = LPMetadataProvider()
             metadataProvider.startFetchingMetadata(for: url) { metadata, error in
