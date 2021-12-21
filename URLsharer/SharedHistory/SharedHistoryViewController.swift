@@ -17,7 +17,7 @@ class SharedHistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        sharedHistoryTableView.register(UINib(nibName: "URLHistoryTableVIewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
+        sharedHistoryTableView.register(UINib(nibName: "URLHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         presenter.fetchURLMetadata()
     }
 }
@@ -30,7 +30,7 @@ extension SharedHistoryViewController: UITableViewDataSource, UITableViewDelegat
     }
 
     func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = sharedHistoryTableView.dequeueReusableCell(withIdentifier: "CustomCell") as! URLHistoryTableVIewCell
+        let cell = sharedHistoryTableView.dequeueReusableCell(withIdentifier: "CustomCell") as! URLHistoryTableViewCell
         cell.siteMetadataInfo = presenter.linkMetadata[indexPath.row]
         return cell
     }
@@ -38,8 +38,8 @@ extension SharedHistoryViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
         return 100
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         sharedHistoryTableView.deselectRow(at: indexPath, animated: true)
     }
 }

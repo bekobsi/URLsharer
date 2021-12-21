@@ -9,7 +9,7 @@ import LinkPresentation
 import MobileCoreServices
 import UIKit
 
-class URLHistoryTableVIewCell: UITableViewCell {
+class URLHistoryTableViewCell: UITableViewCell {
     @IBOutlet var siteTitleTextView: UITextView!
     @IBOutlet var siteThumbnailImageProvider: UIImageView!
 
