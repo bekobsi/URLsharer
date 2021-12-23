@@ -12,6 +12,8 @@
 		980D7F5A273BEDEF00D1D6B6 /* URLHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980D7F58273BEDEF00D1D6B6 /* URLHistoryTableViewCell.xib */; };
 		987D5C0327510ACC00671A01 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 987D5C0227510ACC00671A01 /* RxSwift */; };
 		987D5C0727538BBC00671A01 /* FetchLinkMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987D5C0627538BBC00671A01 /* FetchLinkMetadata.swift */; };
+		98B4844D2774087800D28A1A /* ConstantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A0B5FA277349BD004F471B /* ConstantList.swift */; };
+		98B4844E27742BA700D28A1A /* ConstantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A0B5FA277349BD004F471B /* ConstantList.swift */; };
 		98B4904A267905B600A5C3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B49049267905B600A5C3A3 /* AppDelegate.swift */; };
 		98B4904C267905B600A5C3A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4904B267905B600A5C3A3 /* SceneDelegate.swift */; };
 		98B49053267905B900A5C3A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B49052267905B900A5C3A3 /* Assets.xcassets */; };
@@ -76,6 +78,7 @@
 		980D7F57273BEDEF00D1D6B6 /* URLHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLHistoryTableViewCell.swift; path = ../Xibs/URLHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		980D7F58273BEDEF00D1D6B6 /* URLHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = URLHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		987D5C0627538BBC00671A01 /* FetchLinkMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLinkMetadata.swift; sourceTree = "<group>"; };
+		98A0B5FA277349BD004F471B /* ConstantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantList.swift; sourceTree = "<group>"; };
 		98A7641C2768A6B200009D8D /* URLsharer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = URLsharer.entitlements; sourceTree = "<group>"; };
 		98B49046267905B600A5C3A3 /* URLsharer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLsharer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B49049267905B600A5C3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				98A7641C2768A6B200009D8D /* URLsharer.entitlements */,
+				98A0B5FA277349BD004F471B /* ConstantList.swift */,
 				98E2177026A0734D0042454F /* Extensions */,
 				98BB614C275103530016CD1A /* Models */,
 				980D7F40273BE9DB00D1D6B6 /* Cells */,
@@ -540,6 +544,7 @@
 				98E2176F269C785F0042454F /* SharedHistoryPresenter.swift in Sources */,
 				98B49090267A199F00A5C3A3 /* SharedHistoryViewController.swift in Sources */,
 				980D7F59273BEDEF00D1D6B6 /* URLHistoryTableViewCell.swift in Sources */,
+				98B4844D2774087800D28A1A /* ConstantList.swift in Sources */,
 				98B4904A267905B600A5C3A3 /* AppDelegate.swift in Sources */,
 				987D5C0727538BBC00671A01 /* FetchLinkMetadata.swift in Sources */,
 				98B4904C267905B600A5C3A3 /* SceneDelegate.swift in Sources */,
@@ -567,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B490E9267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift in Sources */,
+				98B4844E27742BA700D28A1A /* ConstantList.swift in Sources */,
 				98E2177326A19D760042454F /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

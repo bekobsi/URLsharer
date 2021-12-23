@@ -47,10 +47,10 @@ class QRcodeDisplayScreen: UIViewController {
     }
 
     private func urlAddToUserDefaults(url: String) {
-        let groupName = "group.UrldataShareGroups"
-        let userDefaults = UserDefaults(suiteName: groupName)
-        var urlHistoryList = userDefaults?.array(forKey: "urlHistoryList") as? [String] ?? []
+        let constantList = ConstantList()
+        let userDefaults = UserDefaults(suiteName: constantList.groupName)
+        var urlHistoryList = userDefaults?.array(forKey: constantList.urlHistoryList) as? [String] ?? []
         urlHistoryList.insert(url, at: 0)
-        userDefaults?.set(urlHistoryList, forKey: "urlHistoryList")
+        userDefaults?.set(urlHistoryList, forKey: constantList.urlHistoryList)
     }
 }

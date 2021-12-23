@@ -16,15 +16,15 @@ protocol LinkMetadataRepository {
 
 final class FetchLinkMetadata: LinkMetadataRepository {
     func get() -> Single<[LPLinkMetadata]> {
-        let groupName = "group.UrldataShareGroups"
-        let userDefaults = UserDefaults(suiteName: groupName)
-        let urlHistoryList = userDefaults?.stringArray(forKey: "urlHistoryList") ?? []
+        let constantList = ConstantList()
+        let userDefaults = UserDefaults(suiteName: constantList.groupName)
+        let urlHistoryList = userDefaults?.stringArray(forKey: constantList.urlHistoryList) ?? []
         let converedUrlHistoryList = urlHistoryList.map { self.convert(url: URL(string: $0)!) }
 
         return Observable.zip(converedUrlHistoryList).take(1).asSingle()
     }
 
-   private func convert(url: URL) -> Observable<LPLinkMetadata> {
+    private func convert(url: URL) -> Observable<LPLinkMetadata> {
         return Observable.create { observer in
             let metadataProvider = LPMetadataProvider()
             metadataProvider.startFetchingMetadata(for: url) { metadata, error in
