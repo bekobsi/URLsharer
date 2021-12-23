@@ -1,35 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cye-wb-tsH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cye-wb-tsH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Shared History View Controller-->
         <scene sceneID="Esj-R6-UBw">
             <objects>
-                <viewController id="Cye-wb-tsH" customClass="SharedHistoryViewController" customModule="URLsharer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SharedHistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cye-wb-tsH" customClass="SharedHistoryViewController" customModule="URLsharer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="inP-pK-bOc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygf-yK-Ozj">
-                                <rect key="frame" x="87" y="266" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fxa-Uw-XMQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Cye-wb-tsH" id="ZG9-Nw-zGj"/>
+                                    <outlet property="delegate" destination="Cye-wb-tsH" id="Swe-iD-chZ"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iai-bM-BPU"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fxa-Uw-XMQ" firstAttribute="top" secondItem="Iai-bM-BPU" secondAttribute="top" id="MGE-F8-5cG"/>
+                            <constraint firstItem="Fxa-Uw-XMQ" firstAttribute="leading" secondItem="Iai-bM-BPU" secondAttribute="leading" id="UfQ-kN-ybs"/>
+                            <constraint firstItem="Iai-bM-BPU" firstAttribute="bottom" secondItem="Fxa-Uw-XMQ" secondAttribute="bottom" id="jnI-c6-2Ug"/>
+                            <constraint firstItem="Iai-bM-BPU" firstAttribute="trailing" secondItem="Fxa-Uw-XMQ" secondAttribute="trailing" id="ntN-4Z-PYB"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="IdZ-JX-KU5"/>
                     <connections>
-                        <outlet property="testImage" destination="ygf-yK-Ozj" id="ruZ-Q4-Mz4"/>
+                        <outlet property="sharedHistoryTableView" destination="Fxa-Uw-XMQ" id="Xze-Tc-OYj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omJ-fd-lJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="169"/>
+            <point key="canvasLocation" x="-422" y="88"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

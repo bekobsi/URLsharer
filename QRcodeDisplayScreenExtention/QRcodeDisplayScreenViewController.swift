@@ -14,6 +14,10 @@ class QRcodeDisplayScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         retrieveData()
+    }
+
+    private func setUpView() {
+        overrideUserInterfaceStyle = .light
         let leftBarButton = UIBarButtonItem(title: "戻る", style: .plain, target: self, action: #selector(tappedLeftBarButton))
         navigationItem.leftBarButtonItem = leftBarButton
     }
@@ -26,16 +30,15 @@ class QRcodeDisplayScreen: UIViewController {
         guard let extensionItem: NSExtensionItem = extensionContext?.inputItems.first as? NSExtensionItem,
               let itemProviders = extensionItem.attachments?.first else { return }
         let puclicURL = String(kUTTypeURL)
-        print("puclicURL:", puclicURL)
         // shareExtension で NSURL を取得
         if itemProviders.hasItemConformingToTypeIdentifier(puclicURL) {
             itemProviders.loadItem(forTypeIdentifier: puclicURL, options: nil, completionHandler: { item, _ in
                 if let url: NSURL = item as? NSURL {
+                    self.urlAddToUserDefaults(url: url.absoluteString!)
                     // QRcodeに変換
                     // ----------
-                    let QRimage = self.generateQRCode(from: url.absoluteString ?? "")
                     DispatchQueue.main.async {
-                        self.QRCodeImage.image = QRimage
+                        self.QRCodeImage.image = UIImage.makeQRCode(text: url.absoluteString!)
                         self.urlLabel.text = url.absoluteString
                     }
                 }
@@ -43,13 +46,11 @@ class QRcodeDisplayScreen: UIViewController {
         }
     }
 
-    private func generateQRCode(from string: String) -> UIImage? {
-        let data = string.data(using: String.Encoding.ascii)
-        if let QRFilter = CIFilter(name: "CIQRCodeGenerator") {
-            QRFilter.setValue(data, forKey: "inputMessage")
-            guard let QRImage = QRFilter.outputImage else { return nil }
-            return UIImage(ciImage: QRImage)
-        }
-        return nil
+    private func urlAddToUserDefaults(url: String) {
+        let constantList = ConstantList()
+        let userDefaults = UserDefaults(suiteName: constantList.groupName)
+        var urlHistoryList = userDefaults?.array(forKey: constantList.urlHistoryList) as? [String] ?? []
+        urlHistoryList.insert(url, at: 0)
+        userDefaults?.set(urlHistoryList, forKey: constantList.urlHistoryList)
     }
 }

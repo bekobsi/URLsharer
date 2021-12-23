@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="blN-F8-7Bx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="blN-F8-7Bx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-1807" y="13"/>
         </scene>
-        <!--URLsharer-->
+        <!--URLshared-->
         <scene sceneID="ECF-x5-Py4">
             <objects>
                 <viewController storyboardIdentifier="QRcodeDisplayScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DAn-d4-UD3" customClass="QRcodeDisplayScreen" customModule="QRcodeDisplayScreenExtention" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,7 +58,7 @@
                             <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="Pl8-lf-6n7" secondAttribute="trailing" constant="10" id="yqz-1V-O8O"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="URLsharer" id="s5F-eE-agX"/>
+                    <navigationItem key="navigationItem" title="URLshared" id="s5F-eE-agX"/>
                     <connections>
                         <outlet property="QRCodeImage" destination="ZfW-AD-7Mf" id="jtS-BP-Kt5"/>
                         <outlet property="urlLabel" destination="Pl8-lf-6n7" id="AUE-di-y2R"/>

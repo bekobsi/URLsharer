@@ -8,21 +8,48 @@
 import UIKit
 
 class SharedHistoryViewController: UIViewController {
-    @IBOutlet var testImage: UIImageView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let QRimage = generateQRCode(from: "https://github.com/el-hoshino/QuickshaRe")
+    @IBOutlet var sharedHistoryTableView: UITableView!
 
-        testImage.image = QRimage
+    private var presenter: SharedHistoryPresenterInput!
+    func inject(presenter: SharedHistoryPresenterInput) {
+        self.presenter = presenter
     }
 
-    func generateQRCode(from string: String) -> UIImage? {
-        let data = string.data(using: String.Encoding.ascii)
-        if let QRFilter = CIFilter(name: "CIQRCodeGenerator") {
-            QRFilter.setValue(data, forKey: "inputMessage")
-            guard let QRImage = QRFilter.outputImage else { return nil }
-            return UIImage(ciImage: QRImage)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        sharedHistoryTableView.register(UINib(nibName: "URLHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
+        presenter.fetchURLMetadata()
+    }
+}
+
+// MARK: - SharedHistoryTableView Extention
+
+extension SharedHistoryViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return presenter.linkMetadata.count
+    }
+
+    func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = sharedHistoryTableView.dequeueReusableCell(withIdentifier: "CustomCell") as! URLHistoryTableViewCell
+        cell.siteMetadataInfo = presenter.linkMetadata[indexPath.row]
+        return cell
+    }
+
+    func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
+        return 100
+    }
+
+    func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
+        sharedHistoryTableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - SharedHistoryPresenterOutput
+
+extension SharedHistoryViewController: SharedHistoryPresenterOutput {
+    func sharedHistoryTableViewReloadData() {
+        DispatchQueue.main.async {
+            self.sharedHistoryTableView.reloadData()
         }
-        return nil
     }
 }

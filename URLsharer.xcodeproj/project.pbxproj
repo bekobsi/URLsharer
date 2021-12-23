@@ -3,11 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4CCFB45CD739D231BD2DF940 /* Pods_URLsharer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BC2E024A15A9F3BC42991F /* Pods_URLsharer.framework */; };
+		980D7F59273BEDEF00D1D6B6 /* URLHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980D7F57273BEDEF00D1D6B6 /* URLHistoryTableViewCell.swift */; };
+		980D7F5A273BEDEF00D1D6B6 /* URLHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980D7F58273BEDEF00D1D6B6 /* URLHistoryTableViewCell.xib */; };
+		987D5C0327510ACC00671A01 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 987D5C0227510ACC00671A01 /* RxSwift */; };
+		987D5C0727538BBC00671A01 /* FetchLinkMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987D5C0627538BBC00671A01 /* FetchLinkMetadata.swift */; };
+		98B4844D2774087800D28A1A /* ConstantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A0B5FA277349BD004F471B /* ConstantList.swift */; };
+		98B4844E27742BA700D28A1A /* ConstantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A0B5FA277349BD004F471B /* ConstantList.swift */; };
 		98B4904A267905B600A5C3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B49049267905B600A5C3A3 /* AppDelegate.swift */; };
 		98B4904C267905B600A5C3A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4904B267905B600A5C3A3 /* SceneDelegate.swift */; };
 		98B49053267905B900A5C3A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B49052267905B900A5C3A3 /* Assets.xcassets */; };
@@ -19,6 +25,8 @@
 		98B490E9267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B490E8267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift */; };
 		98B490EC267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B490EA267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard */; };
 		98B490F1267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 98B490E6267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		98E2176F269C785F0042454F /* SharedHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E2176E269C785F0042454F /* SharedHistoryPresenter.swift */; };
+		98E2177326A19D760042454F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E2177126A073600042454F /* UIImageExtension.swift */; };
 		9CB57DF3B7383FC81368280D /* Pods_URLsharerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21EA89B1AD9848BF5AA6C1D /* Pods_URLsharerTests.framework */; };
 		9E20B438FA979509F2026D82 /* Pods_URLsharer_URLsharerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AD5E2DDB5C9D965FA6094C /* Pods_URLsharer_URLsharerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +75,11 @@
 		57AD5E2DDB5C9D965FA6094C /* Pods_URLsharer_URLsharerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URLsharer_URLsharerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D004609EE903B1F8E54075 /* Pods-URLsharer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer.debug.xcconfig"; path = "Target Support Files/Pods-URLsharer/Pods-URLsharer.debug.xcconfig"; sourceTree = "<group>"; };
 		8ADCD25FD38346FD31CE723C /* Pods-URLsharer-URLsharerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer-URLsharerUITests.release.xcconfig"; path = "Target Support Files/Pods-URLsharer-URLsharerUITests/Pods-URLsharer-URLsharerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		980D7F57273BEDEF00D1D6B6 /* URLHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLHistoryTableViewCell.swift; path = ../Xibs/URLHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		980D7F58273BEDEF00D1D6B6 /* URLHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = URLHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		987D5C0627538BBC00671A01 /* FetchLinkMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLinkMetadata.swift; sourceTree = "<group>"; };
+		98A0B5FA277349BD004F471B /* ConstantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantList.swift; sourceTree = "<group>"; };
+		98A7641C2768A6B200009D8D /* URLsharer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = URLsharer.entitlements; sourceTree = "<group>"; };
 		98B49046267905B600A5C3A3 /* URLsharer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLsharer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B49049267905B600A5C3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B4904B267905B600A5C3A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +98,9 @@
 		98B490E8267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeDisplayScreenViewController.swift; sourceTree = "<group>"; };
 		98B490EB267B83B200A5C3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QRcodeDisplayScreen.storyboard; sourceTree = "<group>"; };
 		98B490ED267B83B200A5C3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98D69E6627678ED400CAA76F /* QRcodeDisplayScreenExtention.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QRcodeDisplayScreenExtention.entitlements; sourceTree = "<group>"; };
+		98E2176E269C785F0042454F /* SharedHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedHistoryPresenter.swift; sourceTree = "<group>"; };
+		98E2177126A073600042454F /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		A37D1DAD24D236EA283E05FB /* Pods-URLsharer-URLsharerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer-URLsharerUITests.debug.xcconfig"; path = "Target Support Files/Pods-URLsharer-URLsharerUITests/Pods-URLsharer-URLsharerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B83EAA8C24A47C803466522F /* Pods-URLsharer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLsharer.release.xcconfig"; path = "Target Support Files/Pods-URLsharer/Pods-URLsharer.release.xcconfig"; sourceTree = "<group>"; };
 		C21EA89B1AD9848BF5AA6C1D /* Pods_URLsharerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URLsharerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				987D5C0327510ACC00671A01 /* RxSwift in Frameworks */,
 				4CCFB45CD739D231BD2DF940 /* Pods_URLsharer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +143,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		980D7F40273BE9DB00D1D6B6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				980D7F57273BEDEF00D1D6B6 /* URLHistoryTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		980D7F41273BE9F100D1D6B6 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				980D7F58273BEDEF00D1D6B6 /* URLHistoryTableViewCell.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		98B4903D267905B600A5C3A3 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +186,12 @@
 		98B49048267905B600A5C3A3 /* URLsharer */ = {
 			isa = PBXGroup;
 			children = (
+				98A7641C2768A6B200009D8D /* URLsharer.entitlements */,
+				98A0B5FA277349BD004F471B /* ConstantList.swift */,
+				98E2177026A0734D0042454F /* Extensions */,
+				98BB614C275103530016CD1A /* Models */,
+				980D7F40273BE9DB00D1D6B6 /* Cells */,
+				980D7F41273BE9F100D1D6B6 /* Xibs */,
 				98B49097267A1A5400A5C3A3 /* SharedHistory */,
 				98B49052267905B900A5C3A3 /* Assets.xcassets */,
 				98B49054267905B900A5C3A3 /* LaunchScreen.storyboard */,
@@ -184,8 +223,9 @@
 		98B49097267A1A5400A5C3A3 /* SharedHistory */ = {
 			isa = PBXGroup;
 			children = (
-				98B4908F267A199F00A5C3A3 /* SharedHistoryViewController.swift */,
 				98B4907C267A18C100A5C3A3 /* SharedHistory.storyboard */,
+				98B4908F267A199F00A5C3A3 /* SharedHistoryViewController.swift */,
+				98E2176E269C785F0042454F /* SharedHistoryPresenter.swift */,
 			);
 			path = SharedHistory;
 			sourceTree = "<group>";
@@ -193,11 +233,28 @@
 		98B490E7267B83B200A5C3A3 /* QRcodeDisplayScreenExtention */ = {
 			isa = PBXGroup;
 			children = (
+				98D69E6627678ED400CAA76F /* QRcodeDisplayScreenExtention.entitlements */,
 				98B490EA267B83B200A5C3A3 /* QRcodeDisplayScreen.storyboard */,
 				98B490E8267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift */,
 				98B490ED267B83B200A5C3A3 /* Info.plist */,
 			);
 			path = QRcodeDisplayScreenExtention;
+			sourceTree = "<group>";
+		};
+		98BB614C275103530016CD1A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				987D5C0627538BBC00671A01 /* FetchLinkMetadata.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		98E2177026A0734D0042454F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98E2177126A073600042454F /* UIImageExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A85E15CEEDA17669FF682AEB /* Pods */ = {
@@ -243,6 +300,9 @@
 				98B490EF267B83B200A5C3A3 /* PBXTargetDependency */,
 			);
 			name = URLsharer;
+			packageProductDependencies = (
+				987D5C0227510ACC00671A01 /* RxSwift */,
+			);
 			productName = URLsharer;
 			productReference = 98B49046267905B600A5C3A3 /* URLsharer.app */;
 			productType = "com.apple.product-type.application";
@@ -298,6 +358,8 @@
 			dependencies = (
 			);
 			name = QRcodeDisplayScreenExtention;
+			packageProductDependencies = (
+			);
 			productName = QRcodeDisplayScreenExtention;
 			productReference = 98B490E6267B83B200A5C3A3 /* QRcodeDisplayScreenExtention.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -336,6 +398,9 @@
 				Base,
 			);
 			mainGroup = 98B4903D267905B600A5C3A3;
+			packageReferences = (
+				987D5C0127510ACC00671A01 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 98B49047267905B600A5C3A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -353,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980D7F5A273BEDEF00D1D6B6 /* URLHistoryTableViewCell.xib in Resources */,
 				98B4907D267A18C100A5C3A3 /* SharedHistory.storyboard in Resources */,
 				98B49056267905B900A5C3A3 /* LaunchScreen.storyboard in Resources */,
 				98B49053267905B900A5C3A3 /* Assets.xcassets in Resources */,
@@ -475,8 +541,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E2176F269C785F0042454F /* SharedHistoryPresenter.swift in Sources */,
 				98B49090267A199F00A5C3A3 /* SharedHistoryViewController.swift in Sources */,
+				980D7F59273BEDEF00D1D6B6 /* URLHistoryTableViewCell.swift in Sources */,
+				98B4844D2774087800D28A1A /* ConstantList.swift in Sources */,
 				98B4904A267905B600A5C3A3 /* AppDelegate.swift in Sources */,
+				987D5C0727538BBC00671A01 /* FetchLinkMetadata.swift in Sources */,
 				98B4904C267905B600A5C3A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +572,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B490E9267B83B200A5C3A3 /* QRcodeDisplayScreenViewController.swift in Sources */,
+				98B4844E27742BA700D28A1A /* ConstantList.swift in Sources */,
+				98E2177326A19D760042454F /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +740,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = URLsharer/URLsharer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FB9J7G99N9;
 				INFOPLIST_FILE = URLsharer/Info.plist;
@@ -689,6 +762,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = URLsharer/URLsharer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FB9J7G99N9;
 				INFOPLIST_FILE = URLsharer/Info.plist;
@@ -794,6 +868,7 @@
 		98B490F3267B83B200A5C3A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QRcodeDisplayScreenExtention/QRcodeDisplayScreenExtention.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FB9J7G99N9;
 				INFOPLIST_FILE = QRcodeDisplayScreenExtention/Info.plist;
@@ -813,6 +888,7 @@
 		98B490F4267B83B200A5C3A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QRcodeDisplayScreenExtention/QRcodeDisplayScreenExtention.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FB9J7G99N9;
 				INFOPLIST_FILE = QRcodeDisplayScreenExtention/Info.plist;
@@ -878,6 +954,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		987D5C0127510ACC00671A01 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		987D5C0227510ACC00671A01 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 987D5C0127510ACC00671A01 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98B4903E267905B600A5C3A3 /* Project object */;
 }
