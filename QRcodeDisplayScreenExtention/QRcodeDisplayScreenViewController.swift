@@ -8,7 +8,7 @@ import MobileCoreServices
 import Social
 import UIKit
 
-class QRcodeDisplayScreen: UIViewController {
+class QRcodeDisplayScreenViewController: UIViewController {
     @IBOutlet var QRCodeImage: UIImageView!
     @IBOutlet var urlLabel: UILabel!
     override func viewDidLoad() {

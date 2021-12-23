@@ -27,7 +27,7 @@
         <!--URLshared-->
         <scene sceneID="ECF-x5-Py4">
             <objects>
-                <viewController storyboardIdentifier="QRcodeDisplayScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DAn-d4-UD3" customClass="QRcodeDisplayScreen" customModule="QRcodeDisplayScreenExtention" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRcodeDisplayScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DAn-d4-UD3" customClass="QRcodeDisplayScreenViewController" customModule="QRcodeDisplayScreenExtention" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GX0-wI-cv4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
