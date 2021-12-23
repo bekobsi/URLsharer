@@ -16,9 +16,8 @@ protocol LinkMetadataRepository {
 
 final class FetchLinkMetadata: LinkMetadataRepository {
     func get() -> Single<[LPLinkMetadata]> {
-        let constantList = ConstantList()
-        let userDefaults = UserDefaults(suiteName: constantList.groupName)
-        let urlHistoryList = userDefaults?.stringArray(forKey: constantList.urlHistoryList) ?? []
+        let userDefaults = UserDefaults(suiteName: ConstantList.groupName)
+        let urlHistoryList = userDefaults?.stringArray(forKey: ConstantList.urlHistoryList) ?? []
         let converedUrlHistoryList = urlHistoryList.map { self.convert(url: URL(string: $0)!) }
 
         return Observable.zip(converedUrlHistoryList).take(1).asSingle()

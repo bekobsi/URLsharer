@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ConstantList {
-    let groupName: String = "group.UrldataShareGroups"
-    let urlHistoryList: String = "urlHistoryList"
+public enum ConstantList {
+    static let groupName: String = "group.UrldataShareGroups"
+    static let urlHistoryList: String = "urlHistoryList"
 }
