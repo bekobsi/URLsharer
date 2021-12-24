@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="blN-F8-7Bx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DAn-d4-UD3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,65 +8,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="8jj-xq-udG">
-            <objects>
-                <navigationController id="blN-F8-7Bx" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pII-cT-Z5a">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="DAn-d4-UD3" kind="relationship" relationship="rootViewController" id="mPp-Pk-vt4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Syf-qf-LWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1807" y="13"/>
-        </scene>
-        <!--URLshared-->
+        <!--Rcode Display Screen View Controller-->
         <scene sceneID="ECF-x5-Py4">
             <objects>
-                <viewController storyboardIdentifier="QRcodeDisplayScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DAn-d4-UD3" customClass="QRcodeDisplayScreenViewController" customModule="QRcodeDisplayScreenExtention" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRcodeDisplayScreenViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DAn-d4-UD3" customClass="QRcodeDisplayScreenViewController" customModule="QRcodeDisplayScreenExtention" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GX0-wI-cv4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZfW-AD-7Mf" userLabel="QRCode Image">
-                                <rect key="frame" x="10" y="98" width="394" height="394"/>
+                                <rect key="frame" x="0.0" y="358" width="404" height="404"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZfW-AD-7Mf" secondAttribute="height" multiplier="1:1" id="Gvf-ka-J9M"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NowLoding" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl8-lf-6n7">
-                                <rect key="frame" x="10" y="508" width="394" height="20.5"/>
+                                <rect key="frame" x="0.0" y="762" width="404" height="134"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="En6-vZ-On8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="314"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hrd-Sy-cvs"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Pl8-lf-6n7" firstAttribute="leading" secondItem="ZfW-AD-7Mf" secondAttribute="leading" id="Bsu-Ol-Odh"/>
-                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="centerX" secondItem="GX0-wI-cv4" secondAttribute="centerX" id="D1g-n1-mU7"/>
-                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="top" secondItem="Hrd-Sy-cvs" secondAttribute="top" constant="10" id="HgM-Il-u55"/>
-                            <constraint firstAttribute="trailing" secondItem="ZfW-AD-7Mf" secondAttribute="trailing" constant="10" id="IuH-an-UA2"/>
-                            <constraint firstItem="Pl8-lf-6n7" firstAttribute="top" secondItem="ZfW-AD-7Mf" secondAttribute="bottom" constant="16" id="NcS-BD-EQa"/>
-                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="leading" secondItem="Hrd-Sy-cvs" secondAttribute="leading" constant="10" id="cBE-Ty-p9P"/>
+                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="centerX" secondItem="Hrd-Sy-cvs" secondAttribute="centerX" id="D1g-n1-mU7"/>
+                            <constraint firstItem="En6-vZ-On8" firstAttribute="top" secondItem="Hrd-Sy-cvs" secondAttribute="top" id="Dp7-Fl-paA"/>
+                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="bottom" secondItem="Hrd-Sy-cvs" secondAttribute="bottom" constant="-100" id="HgM-Il-u55"/>
+                            <constraint firstAttribute="trailing" secondItem="ZfW-AD-7Mf" secondAttribute="trailing" id="IuH-an-UA2"/>
+                            <constraint firstItem="Pl8-lf-6n7" firstAttribute="top" secondItem="ZfW-AD-7Mf" secondAttribute="bottom" id="NcS-BD-EQa"/>
+                            <constraint firstItem="Pl8-lf-6n7" firstAttribute="bottom" secondItem="GX0-wI-cv4" secondAttribute="bottom" id="V3d-YE-3KL"/>
+                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="leading" secondItem="Hrd-Sy-cvs" secondAttribute="leading" id="cBE-Ty-p9P"/>
+                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="top" secondItem="En6-vZ-On8" secondAttribute="bottom" id="iny-77-R2g"/>
+                            <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="Pl8-lf-6n7" secondAttribute="trailing" id="ji0-5c-bKg"/>
+                            <constraint firstItem="En6-vZ-On8" firstAttribute="leading" secondItem="Hrd-Sy-cvs" secondAttribute="leading" id="ln0-qw-ryY"/>
+                            <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="En6-vZ-On8" secondAttribute="trailing" id="nZA-YV-4mx"/>
                             <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="ZfW-AD-7Mf" secondAttribute="trailing" constant="10" id="pBh-6Z-FWz"/>
                             <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="Pl8-lf-6n7" secondAttribute="trailing" constant="10" id="yqz-1V-O8O"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="URLshared" id="s5F-eE-agX"/>
+                    <navigationItem key="navigationItem" id="s5F-eE-agX"/>
                     <connections>
-                        <outlet property="QRCodeImage" destination="ZfW-AD-7Mf" id="jtS-BP-Kt5"/>
+                        <outlet property="clearImageView" destination="En6-vZ-On8" id="g8U-ks-R2a"/>
+                        <outlet property="qRCodeImageView" destination="ZfW-AD-7Mf" id="rXX-AG-H8r"/>
                         <outlet property="urlLabel" destination="Pl8-lf-6n7" id="AUE-di-y2R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEs-Jr-qxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1007.2463768115942" y="12.723214285714285"/>
+            <point key="canvasLocation" x="-1794.2028985507247" y="22.767857142857142"/>
         </scene>
     </scenes>
 </document>
