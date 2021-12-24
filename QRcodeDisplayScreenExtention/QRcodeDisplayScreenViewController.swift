@@ -16,21 +16,17 @@ class QRcodeDisplayScreenViewController: UIViewController {
         super.viewDidLoad()
         retrieveData()
         setUpView()
-        clearImageView.isUserInteractionEnabled = true
-        clearImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedClearImageView)))
     }
 
     private func setUpView() {
+        clearImageView.isUserInteractionEnabled = true
+        clearImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedClearImageView)))
         qRCodeImageView.layer.cornerRadius = qRCodeImageView.frame.size.width * 0.05
         qRCodeImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
     }
 
     @objc func tappedClearImageView() {
-        extensionContext!.completeRequest(returningItems: nil, completionHandler: nil)
-    }
-
-    @objc func tappedLeftBarButton() {
         extensionContext!.completeRequest(returningItems: nil, completionHandler: nil)
     }
 
