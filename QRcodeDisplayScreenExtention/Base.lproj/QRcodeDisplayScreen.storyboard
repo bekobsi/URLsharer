@@ -16,46 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRX-lT-cUt">
+                                <rect key="frame" x="0.0" y="348" width="414" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZfW-AD-7Mf" userLabel="QRCode Image">
-                                <rect key="frame" x="0.0" y="358" width="404" height="404"/>
+                                <rect key="frame" x="0.0" y="348" width="414" height="414"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZfW-AD-7Mf" secondAttribute="height" multiplier="1:1" id="Gvf-ka-J9M"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NowLoding" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl8-lf-6n7">
-                                <rect key="frame" x="0.0" y="762" width="404" height="134"/>
+                                <rect key="frame" x="10" y="772" width="394" height="20.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="En6-vZ-On8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="314"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="En6-vZ-On8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="304"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hrd-Sy-cvs"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Pl8-lf-6n7" firstAttribute="leading" secondItem="ZfW-AD-7Mf" secondAttribute="leading" id="Bsu-Ol-Odh"/>
-                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="centerX" secondItem="Hrd-Sy-cvs" secondAttribute="centerX" id="D1g-n1-mU7"/>
-                            <constraint firstItem="En6-vZ-On8" firstAttribute="top" secondItem="Hrd-Sy-cvs" secondAttribute="top" id="Dp7-Fl-paA"/>
-                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="bottom" secondItem="Hrd-Sy-cvs" secondAttribute="bottom" constant="-100" id="HgM-Il-u55"/>
-                            <constraint firstAttribute="trailing" secondItem="ZfW-AD-7Mf" secondAttribute="trailing" id="IuH-an-UA2"/>
-                            <constraint firstItem="Pl8-lf-6n7" firstAttribute="top" secondItem="ZfW-AD-7Mf" secondAttribute="bottom" id="NcS-BD-EQa"/>
-                            <constraint firstItem="Pl8-lf-6n7" firstAttribute="bottom" secondItem="GX0-wI-cv4" secondAttribute="bottom" id="V3d-YE-3KL"/>
-                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="leading" secondItem="Hrd-Sy-cvs" secondAttribute="leading" id="cBE-Ty-p9P"/>
-                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="top" secondItem="En6-vZ-On8" secondAttribute="bottom" id="iny-77-R2g"/>
-                            <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="Pl8-lf-6n7" secondAttribute="trailing" id="ji0-5c-bKg"/>
-                            <constraint firstItem="En6-vZ-On8" firstAttribute="leading" secondItem="Hrd-Sy-cvs" secondAttribute="leading" id="ln0-qw-ryY"/>
-                            <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="En6-vZ-On8" secondAttribute="trailing" id="nZA-YV-4mx"/>
-                            <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="ZfW-AD-7Mf" secondAttribute="trailing" constant="10" id="pBh-6Z-FWz"/>
-                            <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="Pl8-lf-6n7" secondAttribute="trailing" constant="10" id="yqz-1V-O8O"/>
+                            <constraint firstItem="NRX-lT-cUt" firstAttribute="leading" secondItem="Hrd-Sy-cvs" secondAttribute="leading" id="Afn-DM-aln"/>
+                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="trailing" secondItem="Hrd-Sy-cvs" secondAttribute="trailing" id="AkV-IR-WNB"/>
+                            <constraint firstItem="NRX-lT-cUt" firstAttribute="top" secondItem="ZfW-AD-7Mf" secondAttribute="top" id="B3r-1m-N4y"/>
+                            <constraint firstAttribute="bottom" secondItem="NRX-lT-cUt" secondAttribute="bottom" id="NQd-LO-Z1P"/>
+                            <constraint firstItem="Pl8-lf-6n7" firstAttribute="top" secondItem="ZfW-AD-7Mf" secondAttribute="bottom" constant="10" id="OVS-S3-mGH"/>
+                            <constraint firstItem="Pl8-lf-6n7" firstAttribute="leading" secondItem="Hrd-Sy-cvs" secondAttribute="leading" constant="10" id="bMH-RV-avY"/>
+                            <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="NRX-lT-cUt" secondAttribute="trailing" id="cmB-ZP-HdP"/>
+                            <constraint firstItem="Hrd-Sy-cvs" firstAttribute="bottom" secondItem="ZfW-AD-7Mf" secondAttribute="bottom" constant="100" id="iP5-2i-cqX"/>
+                            <constraint firstItem="Hrd-Sy-cvs" firstAttribute="trailing" secondItem="Pl8-lf-6n7" secondAttribute="trailing" constant="10" id="mTy-8g-e7c"/>
+                            <constraint firstItem="ZfW-AD-7Mf" firstAttribute="leading" secondItem="Hrd-Sy-cvs" secondAttribute="leading" id="oTH-76-aWW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s5F-eE-agX"/>
                     <connections>
                         <outlet property="clearImageView" destination="En6-vZ-On8" id="g8U-ks-R2a"/>
+                        <outlet property="halfModalView" destination="NRX-lT-cUt" id="Q6O-zr-C8K"/>
                         <outlet property="qRCodeImageView" destination="ZfW-AD-7Mf" id="rXX-AG-H8r"/>
                         <outlet property="urlLabel" destination="Pl8-lf-6n7" id="AUE-di-y2R"/>
                     </connections>

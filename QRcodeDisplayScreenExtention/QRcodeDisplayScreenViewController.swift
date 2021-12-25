@@ -9,6 +9,7 @@ import Social
 import UIKit
 
 class QRcodeDisplayScreenViewController: UIViewController {
+    @IBOutlet var halfModalView: UIView!
     @IBOutlet var clearImageView: UIImageView!
     @IBOutlet var qRCodeImageView: UIImageView!
     @IBOutlet var urlLabel: UILabel!
@@ -21,6 +22,9 @@ class QRcodeDisplayScreenViewController: UIViewController {
     private func setUpView() {
         clearImageView.isUserInteractionEnabled = true
         clearImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedClearImageView)))
+        halfModalView.layer.cornerRadius = halfModalView.frame.size.width * 0.05
+        halfModalView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+
         qRCodeImageView.layer.cornerRadius = qRCodeImageView.frame.size.width * 0.05
         qRCodeImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
