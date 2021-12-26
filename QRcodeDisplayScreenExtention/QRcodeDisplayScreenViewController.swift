@@ -8,21 +8,26 @@ import MobileCoreServices
 import Social
 import UIKit
 
-class QRcodeDisplayScreen: UIViewController {
-    @IBOutlet var QRCodeImage: UIImageView!
+class QRcodeDisplayScreenViewController: UIViewController {
+    @IBOutlet var halfModalView: UIView!
+    @IBOutlet var qRCodeImageView: UIImageView!
     @IBOutlet var urlLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         retrieveData()
+        setUpView()
     }
 
     private func setUpView() {
-        overrideUserInterfaceStyle = .light
-        let leftBarButton = UIBarButtonItem(title: "戻る", style: .plain, target: self, action: #selector(tappedLeftBarButton))
-        navigationItem.leftBarButtonItem = leftBarButton
+        halfModalView.layer.cornerRadius = halfModalView.frame.size.width * 0.05
+        halfModalView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+
+        qRCodeImageView.layer.cornerRadius = qRCodeImageView.frame.size.width * 0.05
+        qRCodeImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
     }
 
-    @objc func tappedLeftBarButton() {
+    override func touchesEnded(_: Set<UITouch>, with _: UIEvent?) {
         extensionContext!.completeRequest(returningItems: nil, completionHandler: nil)
     }
 
@@ -38,7 +43,7 @@ class QRcodeDisplayScreen: UIViewController {
                     // QRcodeに変換
                     // ----------
                     DispatchQueue.main.async {
-                        self.QRCodeImage.image = UIImage.makeQRCode(text: url.absoluteString!)
+                        self.qRCodeImageView.image = UIImage.makeQRCode(text: url.absoluteString!)
                         self.urlLabel.text = url.absoluteString
                     }
                 }
