@@ -27,7 +27,7 @@ class QRcodeDisplayScreenViewController: UIViewController {
         view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
     }
 
-    override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
+    override func touchesEnded(_: Set<UITouch>, with _: UIEvent?) {
         extensionContext!.completeRequest(returningItems: nil, completionHandler: nil)
     }
 
